@@ -1,6 +1,6 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import defaultLayout from "./layouts/DefaultLayout.vue";
+
+import defaultLayout from "./layouts/admin/DefaultLayout.vue";
 </script>
 
 <template>
