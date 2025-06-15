@@ -1,13 +1,31 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import Header from "@/components/layout/header.vue";
 import Sidebar from "@/components/layout/sidebar.vue";
 import Footer from "@/components/layout/footer.vue";
+
+const isSidebarToggled = ref(false);
+
+onMounted(() => {
+  // Khôi phục trạng thái từ localStorage
+  if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+    isSidebarToggled.value = true;
+    document.body.classList.add('sb-sidenav-toggled');
+  }
+});
+
+const handleSidebarToggle = () => {
+  isSidebarToggled.value = !isSidebarToggled.value;
+  document.body.classList.toggle('sb-sidenav-toggled');
+  localStorage.setItem('sb|sidebar-toggle', isSidebarToggled.value);
+};
 </script>
+
 <template>
-  <Header></Header>
+  <Header @toggle-sidebar="handleSidebarToggle"></Header>
   <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
-      <Sidebar></Sidebar>
+      <Sidebar :is-toggled="isSidebarToggled"></Sidebar>
     </div>
     <div id="layoutSidenav_content">
       <main>

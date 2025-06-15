@@ -1,4 +1,12 @@
-<script></script>
+<script setup>
+defineProps({
+  isToggled: {
+    type: Boolean,
+    default: false
+  }
+});
+</script>
+
 <template>
   <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
     <div class="sb-sidenav-menu">
