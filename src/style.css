@@ -11241,3 +11241,99 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+/* client/LoginView + client/RegisterView */
+body {
+    background-color: #f8f9fc;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.login-box {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.social-btn img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.btn-google,
+.btn-facebook {
+    background-color: #F8F9FA !important;
+    border: 1px solid #dee2e6 !important;
+    transition: all 0.2s ease !important;
+
+}
+
+.btn-google:hover,
+.btn-facebook:hover {
+    background-color: #e9ecef;
+}
+
+.btn-google img,
+.btn-facebook img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    /* hoặc nhỏ hơn nữa nếu muốn */
+}
+
+.register-box {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.text-red{
+  color: #dc3545;
+}
+/* */

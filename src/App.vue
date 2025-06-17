@@ -1,8 +1,12 @@
 <script setup>
-
-import defaultLayout from "./layouts/admin/DefaultLayout.vue";
+import AdminLayout from "./layouts/admin/AdminLayout.vue";
+import ClientLayout from "./layouts/client/ClientLayout.vue";
+import loginView from "@/views/client/auth/LoginView.vue";
+import registerView from "@/views/client/auth/RegisterView.vue";
 </script>
 
 <template>
-  <defaultLayout />
+  <!-- <AdminLayout /> -->
+  <ClientLayout />
+  <!-- <loginView /> -->
 </template>

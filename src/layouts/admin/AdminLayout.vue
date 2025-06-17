@@ -1,23 +1,28 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 import Header from "@/components/layout/admin/header.vue";
 import Sidebar from "@/components/layout/admin/sidebar.vue";
 import Footer from "@/components/layout/admin/footer.vue";
 
+// Modal
+import AddUser from "@/views/admin/user/AddUser.vue";
+import loginView from "@/views/admin/auth/LoginView.vue";
+
+import AuthModal from "@/components/ui/modal/AuthModal.vue";
 const isSidebarToggled = ref(false);
 
 onMounted(() => {
   // Khôi phục trạng thái từ localStorage
-  if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+  if (localStorage.getItem("sb|sidebar-toggle") === "true") {
     isSidebarToggled.value = true;
-    document.body.classList.add('sb-sidenav-toggled');
+    document.body.classList.add("sb-sidenav-toggled");
   }
 });
 
 const handleSidebarToggle = () => {
   isSidebarToggled.value = !isSidebarToggled.value;
-  document.body.classList.toggle('sb-sidenav-toggled');
-  localStorage.setItem('sb|sidebar-toggle', isSidebarToggled.value);
+  document.body.classList.toggle("sb-sidenav-toggled");
+  localStorage.setItem("sb|sidebar-toggle", isSidebarToggled.value);
 };
 </script>
 
@@ -120,6 +125,12 @@ const handleSidebarToggle = () => {
               </div>
             </div>
           </div>
+          <!-- modal test -->
+          <AddUser></AddUser> <br />
+          <div class="mt-5">
+            <loginView></loginView>
+          </div>
+          <!-- end modal test -->
         </div>
       </main>
       <Footer></Footer>
