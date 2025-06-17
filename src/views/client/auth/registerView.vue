@@ -1,8 +1,18 @@
 <script setup>
 import googleImage from "@/assets/images/google.png";
 import facebookImage from "@/assets/images/facebook.png";
+import AuthModal from "@/components/ui/modal/AuthModal.vue";
+import { ref } from "vue";
+
+const modalRef = ref(null); // chứa Dom của modal
+
+function submitForm() {
+  console.log("Form submitted");
+  modalRef.value.closeModal(); // Đóng modal sau khi lưu
+}
 </script>
 <template>
+  <AuthModal ref="modalRef" ContentButton="Đăng kí">
   <div class="register-box">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h4 class="mb-0">Đăng ký</h4>
@@ -40,7 +50,10 @@ import facebookImage from "@/assets/images/facebook.png";
         <a href="#" class="text-primary">Chính sách bảo mật</a>
       </div>
       <div class="d-grid mb-3">
-        <button type="submit" class="btn btn-primary fs-14">
+        <button 
+        @click="submitForm"
+        type="submit" 
+        class="btn btn-primary fs-14">
           Tạo tài khoản
         </button>
       </div>
@@ -64,4 +77,5 @@ import facebookImage from "@/assets/images/facebook.png";
       </div>
     </form>
   </div>
+  </AuthModal>
 </template>

@@ -6,9 +6,10 @@ import Footer from "@/components/layout/admin/footer.vue";
 
 // Modal
 import AddUser from "@/views/admin/user/AddUser.vue";
-import loginView from "@/views/admin/auth/LoginView.vue";
+import ConfirmModal from "@/views/admin/user/DeleteUser.vue";
 
-import AuthModal from "@/components/ui/modal/AuthModal.vue";
+
+
 const isSidebarToggled = ref(false);
 
 onMounted(() => {
@@ -127,9 +128,9 @@ const handleSidebarToggle = () => {
           </div>
           <!-- modal test -->
           <AddUser></AddUser> <br />
-          <div class="mt-5">
-            <loginView></loginView>
-          </div>
+           <ConfirmModal></ConfirmModal> <br />
+
+
           <!-- end modal test -->
         </div>
       </main>

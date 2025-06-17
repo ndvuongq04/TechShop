@@ -1,5 +1,6 @@
 <script setup>
 import loginView from "@/views/client/auth/LoginView.vue";
+import registerView from "@/views/client/auth/RegisterView.vue";
 </script>
 <template>
   <div
@@ -8,6 +9,7 @@ import loginView from "@/views/client/auth/LoginView.vue";
     <div class="row">
       <div class="col">Client Layout</div>
       <div class="mt-5">
+        <registerView></registerView>
         <loginView></loginView>
       </div>
     </div>
