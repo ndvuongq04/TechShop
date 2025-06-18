@@ -7,8 +7,11 @@ import UserManagement from "@/views/admin/user/UserManagement.vue";
 </script>
 
 <template>
-  <AdminLayout />
+  <!-- <AdminLayout /> -->
   <!-- <ClientLayout /> -->
   <!-- <loginView /> -->
   <!-- <UserManagement /> -->
+
+  <router-view></router-view> <!-- Đây là nơi hiển thị component -->
+
 </template>
