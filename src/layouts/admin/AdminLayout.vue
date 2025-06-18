@@ -8,8 +8,6 @@ import Footer from "@/components/layout/admin/footer.vue";
 import AddUser from "@/views/admin/user/AddUser.vue";
 import ConfirmModal from "@/views/admin/user/DeleteUser.vue";
 
-
-
 const isSidebarToggled = ref(false);
 
 onMounted(() => {
@@ -25,6 +23,8 @@ const handleSidebarToggle = () => {
   document.body.classList.toggle("sb-sidenav-toggled");
   localStorage.setItem("sb|sidebar-toggle", isSidebarToggled.value);
 };
+
+import UserManagement from "@/views/admin/user/UserManagement.vue";
 </script>
 
 <template>
@@ -128,10 +128,12 @@ const handleSidebarToggle = () => {
           </div>
           <!-- modal test -->
           <AddUser></AddUser> <br />
-           <ConfirmModal></ConfirmModal> <br />
-
+          <ConfirmModal></ConfirmModal> <br />
 
           <!-- end modal test -->
+          <div class="mt-5">
+            <UserManagement />
+          </div>
         </div>
       </main>
       <Footer></Footer>
