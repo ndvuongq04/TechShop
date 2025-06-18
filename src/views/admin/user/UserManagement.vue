@@ -24,25 +24,26 @@ function toggleSort(key) {
   }
 
   console.log(
-    `Hiện tại đang sort cột ${key} -> theo chiều ${sortOrder.value === "asc" ? "tăng" : "giảm"
+    `Hiện tại đang sort cột ${key} -> theo chiều ${
+      sortOrder.value === "asc" ? "tăng" : "giảm"
     }`
   );
 }
 </script>
 
 <template>
-
   <main>
-    <div class="container-fluid px-0">
+    <div class="container-fluid px-4">
       <!-- Card Header -->
       <div
-        class="card-header custom-header d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2 gap-md-0 mb-3">
+        class="card-header custom-header d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2 gap-md-0 mb-3"
+      >
         <div>
           <h5 class="mb-1">Quản lý người dùng</h5>
 
           <small class="text-muted">
-            Trang này cho phép quản trị viên quản lý tài khoản người dùng, bao gồm
-            tìm kiếm, lọc và xem chi tiết người dùng một cách hiệu quả.
+            Trang này cho phép quản trị viên quản lý tài khoản người dùng, bao
+            gồm tìm kiếm, lọc và xem chi tiết người dùng một cách hiệu quả.
           </small>
         </div>
         <button class="btn btn-primary mt-2 mt-md-0">
@@ -108,17 +109,33 @@ function toggleSort(key) {
           <!-- Tìm kiếm -->
           <div class="col-md-2 col-sm-12">
             <label class="form-label mb-1 d-block">Tìm kiếm</label>
-            <input type="search" class="form-control form-control-sm" placeholder="Nhập tên, email..." />
+            <input
+              type="search"
+              class="form-control form-control-sm"
+              placeholder="Nhập tên, email..."
+            />
           </div>
         </div>
 
         <div class="table-responsive">
-          <table id="example" class="table table-fix-left table-striped table-bordered nowrap" style="width: 100%">
+          <table
+            id="example"
+            class="table table-fix-left table-striped table-bordered nowrap"
+            style="width: 100%"
+          >
             <thead>
               <tr>
-                <th v-for="col in columns" :key="col.key" @click="toggleSort(col.key)" class="sortable">
+                <th
+                  v-for="col in columns"
+                  :key="col.key"
+                  @click="toggleSort(col.key)"
+                  class="sortable"
+                >
                   {{ col.label }}
-                  <span v-if="sortColumn === col.key" class="material-symbols-outlined ms-1 align-middle">
+                  <span
+                    v-if="sortColumn === col.key"
+                    class="material-symbols-outlined ms-1 align-middle"
+                  >
                     {{ sortOrder === "asc" ? "expand_less" : "expand_more" }}
                   </span>
                 </th>
@@ -155,7 +172,9 @@ function toggleSort(key) {
           </table>
         </div>
         <!-- table footer -->
-        <div class="row d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+        <div
+          class="row d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center"
+        >
           <!-- Info -->
           <div class="col-md-5 mb-2 mb-md-0">
             <div class="dataTables_info" role="status" aria-live="polite">
@@ -166,7 +185,9 @@ function toggleSort(key) {
           <!-- Pagination -->
           <div class="col-md-7">
             <div class="dataTables_paginate paging_simple_numbers">
-              <ul class="pagination justify-content-md-end justify-content-start mb-0">
+              <ul
+                class="pagination justify-content-md-end justify-content-start mb-0"
+              >
                 <li class="paginate_button page-item previous disabled">
                   <a href="#" class="page-link">Trước</a>
                 </li>
