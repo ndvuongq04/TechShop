@@ -4,6 +4,7 @@ const pageHome = () => import('@/views/client/home/HomeView.vue');
 const pageDetail = () => import('@/views/client/details/DetailsView.vue');
 const pageCart = () => import('@/views/client/cart/CartView.vue');
 const pageShop = () => import('@/views/client/shopMain/ShopView.vue');
+const pageCheckout = () => import('@/views/client/checkout/CheckOutView.vue');
 
 
 const client = [
@@ -31,6 +32,11 @@ const client = [
                 path: 'shop', // đường dẫn con cho trang cửa hàng
                 name: 'client-shop',
                 component: pageShop, // sử dụng component trang cửa hàng
+            },
+            {
+                path: 'checkout', // đường dẫn con cho trang thanh toán
+                name: 'client-checkout',
+                component: pageCheckout, // sử dụng component trang thanh toán
             }
         ]
     }
