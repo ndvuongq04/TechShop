@@ -9,7 +9,7 @@ const pageCheckout = () => import('@/views/client/checkout/CheckOutView.vue');
 
 const client = [
     {
-        path: '/client',
+        path: '/',
         component: LayoutClient, // sử dụng layout khách hàng
         children: [
             {
